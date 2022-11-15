@@ -1,38 +1,120 @@
-.App {
+.data-element td {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 23px;
+  color: #888b8f;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.header {
+  background: #f7f8fd;
+  border-radius: 10px;
+  width: 100%;
+}
+
+th span {
+  max-width: 80px;
+}
+
+th img {
+  margin-left: 5px;
+}
+.truncate {
+  width: 60px;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.table-head {
+  cursor: pointer;
+  padding: 0.5rem !important;
+  font-size: 14px;
+  text-align: center !important;
+  padding: 1rem;
+  max-width: 150px;
+  vertical-align: text-top;
+}
+
+li {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: greenyellow;
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
+  z-index: -1;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  top: 0.9em;
+  /* left: -4em; */
+  width: 3em;
+  height: 0.1em;
+  background: greenyellow;
+  z-index: -1;
+  margin-right: 2em;
+}
+
+li:first-child::before {
+  display: none;
+}
+
+.active {
+  background: greenyellow;
+}
+
+.status-head {
+  font-size: 6px;
+  color: blue;
+}
+
+.data-due-date,
+.data-txn-date {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.donutchart {
+  height: 4em !important;
+  width: 4em !important;
+  margin-top: -11px;
+  margin-left: 10px;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.donut-status {
+  margin-top: -13px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.country-flag {
+  height: 2em;
+  width: 2em;
+  margin-right: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.no-netting {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  border-color: blue;
+  margin: 0 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.data-usd,
+.data-original {
+  text-align: end;
 }
